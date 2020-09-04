@@ -1,0 +1,75 @@
+#page-sucess {
+    background-image: url('/image/back-feedback.svg');
+    background-color:#086C97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+#page-sucess .content {
+    text-align: center;
+}
+#page-sucess .content .icon-sucess {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    
+    border-radius: 50%;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5s;
+
+}
+#page-sucess .content .icon-sucess img {
+    height: 4.5rem;
+}
+#page-sucess .content h1{
+    color: var(--color-text-secondary);
+    line-height: 5rem;
+
+    font-size: 2.3rem;
+}
+
+#page-sucess .content p {
+    color: var(--color-text-secondary);
+    font-size: 1.4rem;
+    opacity: .7;
+
+    margin-bottom: 1.5rem;
+}
+
+#page-sucess .content button{
+    width: 40%;
+    padding: .9rem;
+
+    border: none;
+    background-color: var(--color-button-primary);
+    color: var(--color-text-secondary);
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+#page-sucess .content button:hover {
+    background: #F7BE2E;
+}
+
+@media (min-width: 1280px){
+    #page-sucess .content .icon-sucess{
+        width: 130px;
+        height: 130px;
+    }
+
+    #page-sucess .content .icon-sucess img {
+        height: 5.2rem;
+    }
+}

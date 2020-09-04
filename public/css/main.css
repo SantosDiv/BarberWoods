@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    /*Variáveis no CSS*/
+    --color-background-page: #d4d4d4;
+    --color-primary: #000000;
+    --color-background-white: #ffffff;
+    --color-text-primary: #fcd471;
+    --color-text-secondary: #ffffff;
+    --color-text-in-secondary:#4e4e4e;
+    --color-background-question: #033B53;
+    --color-button-primary: #F0AC02;
+    --color-button-secondary: #118EA9;
+    --color-icon-feedback: #F02F02; 
+    font-size: 60%;
+}
+
+body {
+    background-color: var(--color-background-page);
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+}
+
+@media (min-width: 1024px) {
+     :root {
+         font-size: 62.5%;
+     }
+}
+
+/*
+    --color-background-page: #e5e5e5;
+    --color-primary: #086C97;
+    --color-background-white: #ffffff;
+    --color-text-primary: #C6EEFF;
+    --color-text-secondary: #a2e0fa;
+    --color-background-question: #033B53;
+    --color-button-primary: #F0AC02;
+    --color-button-primary-hover: #F7BE2E;
+    --color-button-secondary: #118EA9;
+    --color-icon-feedback: #F02F02;
+*/

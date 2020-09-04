@@ -1,0 +1,21 @@
+Barber Style
+- O cliente está precisando marcar o horário com o seu barbeiro.
+
+- O barbeiro está precisando ter o controle dos horários dos clientes e as vagas do dia.
+
+- Precisa ser uma interação simples e rápida de marcação de horário. 
+- Sem cadastro prévio;
+
+
+Tela Cliente:
+- nome e telefone;
+- Dias disponíveis;
+- horários disponíveis;
+- marcar horário;
+
+Tela Barbeiro:
+- nome do cliente;
+- Dia marcado;
+- horário marcado;
+- cancelar corte;
+- finalizar corte;

@@ -1,0 +1,15 @@
+/*css - footer*/ 
+#page-all .footer {
+    text-align: center;
+}
+#page-all .footer img {
+    margin-bottom: .1rem;
+    height: 4rem;
+}
+.color-black {
+    color: var(--color-primary);
+}
+
+.color-white {
+    color: var(--color-text-secondary);
+}

@@ -1,0 +1,30 @@
+#page-all {
+    background: var(--color-background-page);
+}
+#page-all .content-clients {
+    background: var(--color-background-white);
+
+    max-width: 80%;
+    margin: -1rem auto;
+    margin-bottom: 1.5rem;
+
+    border-radius: 1rem;
+    padding: 2rem;
+
+}
+#page-all fieldset {
+    border:none;
+}
+
+#page-all fieldset .top-fieldset {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding-bottom: .5rem;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+#page-all fieldset .top-fieldset legend {
+    font-size: 1.5rem;
+    color: var(--color-text-in-secondary);
+}

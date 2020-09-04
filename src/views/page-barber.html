@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/paters/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/paters/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/paters/fieldset-top.css">
+    <link rel="stylesheet" type="text/css" href="/css/pages/page-clients.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+</head>
+<body id="page-all">
+    <header class="header">
+        <nav>
+            <a href="/"><img src="/image/Logo-color.svg" alt="Logo Barber Woords"></a>
+            <div class="question">
+                <span>?</span>
+            </div>
+        </nav>
+    </header>
+    <main class="content-clients"> 
+        <fieldset>
+            <div class="top-fieldset">
+                <legend> Escolha seu barbeiro</legend>
+                <button class="button-base back-secondary">Escolha para mim</button>
+            </div>
+
+            {% for barber in barbers %}
+            <article name="barbers" class="barber-box">
+                <div class="barber-data">
+                    <img src="{{barber.avatar}}" alt="imagem do barberio">
+                    <div class="name-profission">
+                        <h1>{{barber.name}}</h1>
+                        <p>Especialidade: {{barber.especialidade}}</p>
+                    </div>
+                    
+                </div>
+                <button id="btnThis" class="button-base back-primary" value="{{barber.name}}">Quero este</button>
+            </article>
+            {% endfor %}
+        </fieldset>
+
+       
+    </main>
+    <footer class="footer">
+        <img src="/image/Logo-BeB.svg" alt="Logo Barber Woods">
+        <p class="color-black">Todos os direitos reservados</p>
+    </footer>
+</body>
+<script src="/script/sendBarberName.js" defer></script>
+<script>
+    var buttonElements = document.querySelectorAll('#btnThis');
+    let buttonPosition = 0;
+    for (buttonElement of buttonElements) {
+        buttonElement.setAttribute('onclick', "abrePageBarber("+buttonPosition+")");
+        buttonPosition++;
+    }
+</script>
+</html>
