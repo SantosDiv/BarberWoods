@@ -1,3 +1,16 @@
+#page-all .content-clients .loading img{
+    position: absolute;
+    background-color:none;
+    opacity: .4;
+
+    top: 50%;  /* position the top  Edge of the element at the middle of the parent */
+    left: 50%; /* position the left Edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+
+    display: none;
+}
+
 #page-all .content-clients form {
     max-width: 80%;
     margin: 3rem auto;
@@ -67,6 +80,13 @@
     cursor: pointer;
 
     transition: .5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page-all .content-clients fieldset .button img {
+    height: 3rem;
 }
 #page-all .content-clients fieldset .link-cancelamento {
     display: block;

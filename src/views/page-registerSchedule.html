@@ -27,6 +27,7 @@
         </nav>
     </header>
     <main class="content-clients"> 
+        <div class="loading"><img src="/image/Eclipse-1s-200px.svg" alt=""></div>
         <fieldset>
             <div class="top-fieldset">
                 <legend></legend>
@@ -72,7 +73,7 @@
                 </div>
             </form>
             
-            <button type="submit" form="form-clients" class="button">Agendar</button>
+            <button type="submit" form="form-clients" class="button" id="button"></button>
             <a href="#" class="link-cancelamento">Política de Cancelamento</a>
 
         </fieldset>       
@@ -85,6 +86,7 @@
 </html>
 <script src="/script/vanilla-calendar-min.js"></script>
 <script src="/script/getNameBarberURL.js"></script>
+<script src="/script/jquery.js"></script>
 <script>
     //calendar
     let pastDates = true, availableDates = false, availableWeekDays = false;
@@ -97,5 +99,23 @@
                     var inputElement = document.querySelector('input[name=date]');
                     inputElement.value = date;
                 }
-            });    
+            });
+            
+    //load buttom
+    //query
+    var buttonE = document.querySelector('#button');
+    //create
+    var imgElement = document.createElement('img');
+    var textButton = document.createTextNode('Agendar');
+    //Atribute
+    imgElement.setAttribute('src', '/image/Dual-Ring-1s-200px.svg');
+    buttonE.appendChild(textButton);
+   
+    //events
+    buttonE.addEventListener('click', load);
+    function load (){
+        buttonE.removeChild(textButton);
+        buttonE.appendChild(imgElement);
+    }
+    
 </script>
