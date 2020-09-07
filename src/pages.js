@@ -29,6 +29,11 @@ function pageRegisterSchedule (req,res) {
     return res.render("page-registerSchedule.html" , { barbers })
 }
 
+//funtion of page-registerBarber
+function pageRegisterBarber (req, res) {
+    return res.render("page-registerBarber.html");
+}
+
 //function of page-sucess
 function pageSucess (req,res) {
     return res.render("sucess.html")
@@ -63,6 +68,7 @@ module.exports = {
     pageBarber,
     pageRegisterSchedule,
     pageHome,
+    pageRegisterBarber,
     saveClients,
     pageSucess
 }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Woods - Registrar Barbeiro</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/paters/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/paters/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/paters/fieldset-top.css">
+    <link rel="stylesheet" href="css/pages/page-registerBarber.css">
+</head>
+<body id="page-all">
+    <header class="header">
+        <nav>
+            <a href="/"><img src="/image/Logo-color.svg" alt="Logo Barber Woords"></a>
+            <div class="question">
+                <span>?</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-clients">
+        <fieldset>
+            <div class="top-fieldset">
+                <legend>Cadastro de Profissional</legend>
+            </div> 
+            
+            <form action="/save-barber" id="cadBarber">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" placeholder="Nome do Profissional" required> 
+
+                <label for="avatar">Url da foto: </label>
+                <input type="text" name="avatar" placeholder="Foto do Profissional" required>
+
+                <div class="dataEletronics">
+                    <span>
+                        <label for="tel">Telefone: </label>
+                        <input type="phone" name="tel" placeholder="(84) 00000-0000" required>
+                    </span>
+
+                    <span>
+                        <label for="email"> Email:</label>
+                        <input type="email" name="email" placeholder="seuemail@seuemail.com.br" required>
+                    </span>
+                    
+                </div>
+                
+                <div class="dataSpecialty">
+                    <span>
+                        <label for="specialty">Especialidade: </label>
+                        <select name="specialty">
+                            <option value="">Selecione</option>
+                            <option value="0">Barba</option>
+                            <option value="1">Cabelo</option>
+                            <option value="2">Barba / Cabelo</option>
+                        </select>
+                    </span> 
+
+                    <span>
+                        <label for="attendance">Tempo médio de atendimento:</label>
+                        <select name="attendance">
+                            <option value="">Selecione</option>
+                            <option value="0">30 min</option>
+                            <option value="1">40 min</option>
+                            <option value="2">50 min</option>
+                            <option value="3">60 min</option>
+                        </select>
+                    </span>
+                </div>
+                
+
+                <!-- <label for="days">Dias disponíveis:</label>
+                <div class="weekdays">
+                    <span><input type="checkbox" name="weekday[]" value="Segunda-feira" checked> <h3>Segunda-Feira </h3></span>
+                    <span><input type="checkbox" name="weekday[]" value="Terca-feira"> <h3>Terça-Feira </h3></span>
+                    <span><input type="checkbox" name="weekday[]" value="Quarta-feira"> <h3>Quarta-Feira</h3> </span>
+                    <span><input type="checkbox" name="weekday[]" value="Quinta-feira"> <h3>Quinta-Feira</h3> </span>
+                    <span><input type="checkbox" name="weekday[]" value="Sexta-feira"> <h3>Sexta-Feira </h3></span>
+                    <span><input type="checkbox" name="weekday[]" value="Sábado"> <h3>Sábado </h3></span>
+                </div> -->
+            </form>
+            <button form="cadBarber" class="button" id="button"></button>
+        </fieldset>
+    </main>
+
+    
+</body>
+
+<script>
+    // select elements of DOM
+    var buttonE = document.querySelector('#button');
+    var inputsElements = document.querySelectorAll('input');
+ 
+    // IMPORTANTE: É PRECISO CONFIGURAR UMA FORMA DE O BOTÃO SUBMIT SÓ APARECER QUANDO TODOS OS INPUTS ESTIVEREM PREENCHIDOS.
+
+    //PRIMEIRA TENTATIVA, AINDA SEM EXITO!
+    buttonE.style.opacity ='0.2';
+    function verifica(input) {
+        var result = false;
+        for(var i = 0; i<4; i++){
+            if(input[i].value != ""){
+                result = true;
+            }
+        }
+
+        if(result == true){
+            buttonE.style.opacity ='1';
+        }
+    }
+    
+    //COLANDO UMA BORDA VERMELHA QUANDO O INPUT FICA VAZIO, DEPOIS DE PREENCHIDO E APAGADO.
+    for(var input of inputsElements){
+            input.addEventListener('input', (input) => {
+                if(input.target.value === ""){ //O target é o 'alvo', é os parametros que tem dentro do input. Um deles é o value.
+                    input.target.setAttribute('class', 'border-vermelho');
+                    valueBooleanTargetValue = false;
+                }else{
+                    input.target.setAttribute('class', '');
+                    valueBooleanTargetValue = true;
+                }
+            });
+    }
+    
+    verifica(inputsElements);
+    
+
+    //query
+    
+    //create
+    var imgElement = document.createElement('img');
+    var textButton = document.createTextNode('Cadastrar');
+    //Atribute
+    imgElement.setAttribute('src', '/image/Dual-Ring-1s-200px.svg');
+    buttonE.appendChild(textButton);
+   
+    //events
+    buttonE.addEventListener('click', load);
+    function load (){
+        buttonE.removeChild(textButton);
+        buttonE.appendChild(imgElement);
+    }
+</script>
+</html>

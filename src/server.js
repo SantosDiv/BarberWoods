@@ -1,7 +1,7 @@
 const express = require("express")
 const server = express()
 
-const {pageHome, pageBarber, pageRegisterSchedule, saveClients, pageSucess} = require('./pages');
+const {pageHome, pageBarber, pageRegisterSchedule, pageRegisterBarber, saveClients, pageSucess} = require('./pages');
 
 //Config nunjucks
 const nunjucks = require("nunjucks")
@@ -23,6 +23,7 @@ server
 .get("/", pageHome)
 .get("/page-barber", pageBarber)
 .get("/page-registerSchedule", pageRegisterSchedule)
+.get("/page-registerBarber", pageRegisterBarber)
 .get("/sucess", pageSucess)
 .post("/save-client", saveClients)
 

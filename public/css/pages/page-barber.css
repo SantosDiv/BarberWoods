@@ -1,133 +1,57 @@
-#page-all .content-clients .loading img{
-    position: absolute;
-    background-color:none;
-    opacity: .4;
-
-    top: 50%;  /* position the top  Edge of the element at the middle of the parent */
-    left: 50%; /* position the left Edge of the element at the middle of the parent */
-
-    transform: translate(-50%, -50%);
-
-    display: none;
+#page-all .content-clients .top-fieldset button {
+    background: var(--color-button-secondary);
 }
 
-#page-all .content-clients form {
-    max-width: 80%;
-    margin: 3rem auto;
 
+#page-all .content-clients .barber-box {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-}
 
-#page-all .content-clients form .data-personals {
-    width: 100%;
-}
-
-#page-all .content-clients form .data-personals .resume {
-    display: none;
-}
-
-#page-all .content-clients form label{
-    font-size: 1.2rem;
-    color: var(--color-text-in-secondary);
-}
-
-
-#page-all .content-clients form input,
-#page-all .content-clients form select {
-    padding: 1.5rem;
-    margin-top: .5rem;
-    margin-bottom: 1rem;
-
-    border: none;
-    border-radius: .3rem;
-    outline: none;
-    box-shadow: 0px 0px 2px 1px #cccccc;
-
-    width: 100%;
-    box-sizing: border-box;
-
-    transition: .5s;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding-top: .8rem;
+    padding-bottom: .8rem;
 
 }
-#page-all .content-clients form .data-date #myCalendar {
-    margin-top: .8rem;
-    margin-bottom: 1rem;
-}
 
-#page-all .content-clients form input[type="text"]:focus,
-#page-all .content-clients form select:focus {
-    box-shadow: 0px 0px 3px 1px var(--color-button-secondary);
-    transition: .5s;
-}
-
-#page-all .content-clients form .date{
-    display: none;
-}
-
-#page-all .content-clients fieldset .button {
-    margin: 0 auto;
-    border: none;
-    margin-bottom: .9rem;
-    display: block;
-
-    width: 60%;
-    height: 4rem;
-
-    background-color: var(--color-button-primary);
-    color: #fff;
-    cursor: pointer;
-
-    transition: .5s;
-
+#page-all .content-clients .barber-box .barber-data {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-#page-all .content-clients fieldset .button img {
-    height: 3rem;
-}
-#page-all .content-clients fieldset .link-cancelamento {
-    display: block;
-    text-align: center;
 
-    color: var(--color-primary);
+#page-all .content-clients .barber-box .barber-data img {
+    height: 5.5rem;
+    border-radius: 50%;
+
+    margin-right: 1rem;
 }
 
-#page-all .content-clients fieldset .button:hover {
-    opacity: .8;
+#page-all .content-clients .barber-box button {
+    background-color: var(--color-button-primary);
 }
 
+#page-all .content-clients .top-fieldset button:hover,
+#page-all .content-clients .barber-box button:hover {
+    opacity: 0.8;
+}
 
-@media (min-width: 900px) {
-    #page-all .content-clients form {
-        width: 90%;
-    }
-    #page-all .content-clients form .data-personals {
+#page-all .content-clients .barber-data .name-profission p {
+    color: var(--color-text-in-secondary); 
+}
+
+/*general class*/
+.button-base {
+    color: #fff;
+    border: none;
+    padding: .8rem;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+@media (min-width: 940px){
+    #page-all .content-clients {
         width: 50%;
     }
-
-    #page-all .content-clients form .data-personals .resume {
-        display: block;
-        margin-top: 2.5rem;
-    }
-
-    #page-all .content-clients form .data-personals .resume h1 {
-        line-height: 3rem;
-        color: #747474;
-    }
-    #page-all .content-clients form .data-personals .resume p {
-        line-height: 1.8rem;
-        font-size: 1.2rem;
-    }
-
-    #page-all .content-clients fieldset .button{
-        width: 20%;
-    }
-}
-
-@media (min-width: 1280px) {
-
-
 }
