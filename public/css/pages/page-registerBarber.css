@@ -1,3 +1,4 @@
+/*Formulário*/
 #page-all .content-clients form {
     max-width: 100%;
     margin: 4rem auto;
@@ -56,6 +57,7 @@
     color: #033B53;
 }
 
+/*Button*/
 #page-all .content-clients fieldset .button {
     margin: 0 auto;
     border: none;
@@ -80,7 +82,8 @@
     height: 3rem;
 }
 
-@media (min-width: 1100px) {
+/*Media Querys*/
+@media (min-width: 740px) {
     #page-all .content-clients form {
         max-width: 50%;
     }
@@ -102,6 +105,10 @@
     }
 }
 
+/*Classes gerais*/
 .border-vermelho {
     border: 1px solid #f00!important;
+}
+.hidden {
+    opacity: 0.2;
 }

@@ -5,3 +5,4 @@ function abrePageBarber(buttonPosition){
     window.location.href = '/page-registerSchedule'+'?barber='+buttonClickedValue; //Enviando o caminho com o nome do barbeiro via get.
 }
 
+
